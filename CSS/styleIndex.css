@@ -1,0 +1,338 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  header h1 {
+    font-size: 18px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+
+  main {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  main section {
+    margin-bottom: 40px;
+  }
+  
+  main h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  main p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  main h3 {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  main section img {
+    margin-top: 0;
+    max-width: 400px;
+    height: auto;
+  }
+  
+ 
+  ul {
+    list-style: none;
+  }
+  
+  ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  ul li img {
+    margin-right: 10px;
+  }
+  
+
+  .habilidades-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .habilidades {
+    flex: 1;
+  }
+  
+  .imagem-programador {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .imagem-programador img {
+    max-width: 400px;
+    border-radius: 10px;
+    height: auto;
+  }
+  
+
+  #contato {
+    background-color: #f5f5f5;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #contato h3 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #contato p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  #contato a button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  #contato a button:hover {
+    background-color: #333;
+  }
+  
+
+  .sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    gap: 40px;
+  }
+  
+  .texto-sobre {
+    flex: 1;
+  }
+  
+  .texto-sobre h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .texto-sobre p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .imagem-sobre {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .imagem-sobre img {
+    max-width: 350px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+ 
+  .contato {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .contato h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .formulario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .formulario-container h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .formulario-container p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  form input,
+  form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  form textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
+
+  footer {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    font-size: 14px;
+  }
+  
+  footer div a img {
+    margin-left: 10px;
+    width: 20px;
+  }
+  
+
+  @media (max-width: 768px) {
+    
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .habilidades-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .sobre-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    #contato {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    main {
+      padding: 40px 20px;
+    }
+  
+    main h2, 
+    .texto-sobre h2,
+    .contato h2 {
+      font-size: 28px;
+    }
+  
+    ul li {
+      font-size: 24px;
+    }
+  
+    .imagem-programador img,
+    .imagem-sobre img {
+      max-width: 80%;
+    }
+  
+    form {
+      width: 90%;
+      max-width: 350px;
+    }
+  }
+  
+
+
+  
