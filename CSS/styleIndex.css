@@ -7,22 +7,25 @@
   
 
   body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
   }
   
 
   header {
+    background-color: #333;
+    padding: 20px 40px;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
   }
   
   header h1 {
-    font-size: 18px;
+    font-size: 32px;
+    font-weight: bold;
   }
   
   nav ul {
@@ -33,131 +36,61 @@
   
   nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #f0a500;
   }
   
 
-  main {
-    padding: 60px 40px;
+  .banner-principal {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #e0f0fa;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
   }
   
-  main section {
-    margin-bottom: 40px;
+  .banner-principal .banner-imagem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
   }
   
-  main h2 {
-    font-size: 36px;
+  .banner-principal .banner-texto {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #000;
+  }
+  
+  .banner-principal h1 {
+    font-size: 48px;
     font-weight: bold;
-    margin-bottom: 10px;
   }
   
-  main p {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  main h3 {
-    font-size: 40px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-  
-  main section img {
-    margin-top: 0;
-    max-width: 400px;
-    height: auto;
+  .banner-principal p {
+    font-size: 24px;
+    margin-top: 10px;
   }
   
  
-  ul {
-    list-style: none;
-  }
-  
-  ul li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  
-  ul li img {
-    margin-right: 10px;
-  }
-  
-
-  .habilidades-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-    gap: 20px;
-    max-width: 100%;
-    width: 100%;
-  }
-  
-  .habilidades {
-    flex: 1;
-  }
-  
-  .imagem-programador {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .imagem-programador img {
-    max-width: 400px;
-    border-radius: 10px;
-    height: auto;
-  }
-  
-
-  #contato {
-    background-color: #f5f5f5;
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  #contato h3 {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  #contato p {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  #contato a button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-  }
-  
-  #contato a button:hover {
-    background-color: #333;
-  }
-  
-
   .sobre-container {
+    padding: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 40px;
-    gap: 40px;
+    gap: 10px;
   }
   
   .texto-sobre {
@@ -171,35 +104,258 @@
   }
   
   .texto-sobre p {
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
     margin-bottom: 20px;
   }
   
-  .imagem-sobre {
+  .imagem-sobre img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .imagem-sobre img:hover {
+    transform: scale(1.05);
+  }
+  
+
+  .sobre-galeria {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 1fr);
+    gap: 20px;
+    padding: 20px 0 10px;
+  }
+  
+  .sobre-galeria::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .sobre-galeria::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+  
+  .sobre-galeria .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sobre-galeria .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .sobre-galeria .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .sobre-galeria .card-desc {
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+ 
+  .projetos {
+    padding: 60px 40px;
+    background-color: #fff;
+  }
+  
+  .projetos h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .projetos p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+
+  .projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .projeto-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .projeto-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .projeto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .projeto-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .projeto-card p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  
+  .projetos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  
+  .texto-projetos h2,
+  .texto-projetos p {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .texto-projetos h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .texto-projetos p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+ 
+  main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  
+  main h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+
+  .habilidades-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .habilidades {
+    flex: 1;
+  }
+  
+  .habilidades h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .habilidades ul {
+    list-style: none;
+  }
+  
+  .habilidades ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .habilidades ul li img {
+    margin-right: 10px;
+  }
+  
+  .imagem-programador {
     flex: 1;
     display: flex;
     justify-content: center;
   }
   
-  .imagem-sobre img {
-    max-width: 350px;
+  .imagem-programador img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+
+  #contato {
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  #contato h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #contato p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  #contato a {
+    text-decoration: none;
+  }
+  
+  #contato a button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
     border-radius: 8px;
-    object-fit: cover;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
- 
-  .contato {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 60px 20px;
+  #contato a button:hover {
+    background-color: #333;
   }
   
-  .contato h2 {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 10px;
-  }
   
   .formulario-container {
     display: flex;
@@ -229,7 +385,7 @@
     background: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -263,14 +419,14 @@
     background-color: #555;
   }
   
-
+  
   footer {
+    background-color: #333;
+    color: #fff;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    font-size: 14px;
   }
   
   footer div a img {
@@ -278,60 +434,96 @@
     width: 20px;
   }
   
-
+  footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  footer a:hover {
+    color: #f0a500;
+  }
+  
+ 
   @media (max-width: 768px) {
-    
     header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px;
+    }
+  
+    header h1 {
+      font-size: 24px;
     }
   
     nav ul {
-      flex-direction: column;
-      gap: 15px;
+      flex-direction: row;
+      gap: 20px;
     }
   
-    .habilidades-container {
-      flex-direction: column;
-      text-align: center;
+    nav ul li a {
+      font-size: 16px;
+    }
+  
+    .banner-principal {
+      height: 200px;
+    }
+  
+    .banner-principal h1 {
+      font-size: 32px;
+    }
+  
+    .banner-principal p {
+      font-size: 18px;
     }
   
     .sobre-container {
       flex-direction: column;
-      text-align: center;
+      align-items: center;
+    }
+  
+    .sobre-galeria {
+      overflow-x: auto;
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .projetos {
+      padding: 40px 20px;
+    }
+  
+    .projetos h2 {
+      font-size: 28px;
+    }
+  
+    .habilidades-container {
+      flex-direction: column;
     }
   
     #contato {
       flex-direction: column;
-      text-align: center;
       gap: 20px;
+      text-align: center;
     }
   
-    main {
-      padding: 40px 20px;
-    }
-  
-    main h2, 
-    .texto-sobre h2,
-    .contato h2 {
-      font-size: 28px;
-    }
-  
-    ul li {
-      font-size: 24px;
-    }
-  
-    .imagem-programador img,
-    .imagem-sobre img {
-      max-width: 80%;
+    .formulario-container {
+      padding: 20px;
     }
   
     form {
       width: 90%;
-      max-width: 350px;
+      max-width: 400px;
+    }
+  
+    footer {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      padding: 20px 20px;
     }
   }
+  
+
   
 
 
